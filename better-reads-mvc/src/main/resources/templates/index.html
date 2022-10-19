@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Demo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+
+  <div class="container">
+    <div th:insert="components/navbar :: nav"></div>
+  </div>
+
+  <main class="container text-center">
+    <h1 class="display-5 fw-bold">Better Reads</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Control your reading habit. Track the books you read and fuel your reading.</p>
+      <a href="/oauth2/authorization/github" class="btn btn-primary btn-lg px-4 gap-3">Login via GitHub</a>
+    </div>
+    <p class="fw-bold my-3">Or search for a book</p>
+    <div th:insert="components/book-search :: search-panel"></div>
+  </main>
+  </body>
+</html>
